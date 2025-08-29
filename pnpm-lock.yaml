@@ -9,6 +9,10 @@ importers:
   .: {}
 
   contracts:
+    dependencies:
+      '@openzeppelin/contracts':
+        specifier: ^5.4.0
+        version: 5.4.0
     devDependencies:
       '@nomicfoundation/hardhat-chai-matchers':
         specifier: ^1.0.6
@@ -275,6 +279,9 @@ packages:
     peerDependencies:
       ethers: ^5.0.0
       hardhat: ^2.0.0
+
+  '@openzeppelin/contracts@5.4.0':
+    resolution: {integrity: sha512-eCYgWnLg6WO+X52I16TZt8uEjbtdkgLC0SUX/xnAksjjrQI4Xfn4iBRoI5j55dmlOhDv1Y7BoR3cU7e3WWhC6A==}
 
   '@scure/base@1.1.9':
     resolution: {integrity: sha512-8YKhl8GHiNI/pU2VMaofa2Tor7PJRAjwQLBBuilkJ9L5+13yVbC7JO/wS7piioAvPSwR3JKM1IJ/u4xQzbcXKg==}
@@ -1801,6 +1808,8 @@ snapshots:
     dependencies:
       ethers: 5.8.0
       hardhat: 2.26.3(ts-node@10.9.2(@types/node@24.3.0)(typescript@5.9.2))(typescript@5.9.2)
+
+  '@openzeppelin/contracts@5.4.0': {}
 
   '@scure/base@1.1.9': {}
 
