@@ -20,9 +20,6 @@ const config: HardhatUserConfig = {
   },
   typechain: { outDir: "typechain-types", target: "ethers-v5" },
   solidity: "0.8.28",
-  // si ya tienes typechain en config no hace falta repetirlo,
-  // pero podrías añadir:
-  // typechain: { outDir: "typechain-types", target: "ethers-v5" },
   paths: {
     sources: "./contracts",
     tests: "./test",
@@ -30,6 +27,5 @@ const config: HardhatUserConfig = {
     artifacts: "./artifacts"
   }  
 };
-
 
 export default config;

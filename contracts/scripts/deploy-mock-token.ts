@@ -1,5 +1,3 @@
-// scripts/deploy-mock-token.ts
-
 import { ethers } from "hardhat";
 
 // Parámetros configurables del token
