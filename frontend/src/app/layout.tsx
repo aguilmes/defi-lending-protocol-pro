@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Web3Provider } from './walletConfig';
 import Navbar from "@/components/Navbar";
+import NetworkGate from '@/components/NetworkGate';
+import Web3Status from '@/components/Web3Status';
 
 
 const geistSans = Geist({
@@ -27,9 +29,11 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode;
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Web3Provider>
-          <Navbar />
-          {children}
-        </Web3Provider>
+          <NetworkGate>
+            <Navbar />
+            <div className="px-4 py-2"><Web3Status /></div>
+            {children}
+          </NetworkGate>        </Web3Provider>
       </body>
     </html>
   );
