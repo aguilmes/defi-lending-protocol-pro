@@ -12,6 +12,7 @@
     },
     "types": [
       "hardhat",    // para reconocer import { ethers } from "hardhat"
+      "hardhat-deploy",
       "mocha",      // para describe/it
       "chai",       // para expect
       "node"        // si usas globals de Node
@@ -19,12 +20,13 @@
   },
   "include": [
     "test/**/*.ts",
-    "scripts/**/*.ts",
+    "deploy/**/*.ts",
     "../typechain-types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "artifacts",
-    "cache"
+    "cache",
+    "scripts-legacy/**/*.ts", // al utilizar hardhat-deploy, /deploy es el directorio desde el cual hardhat toma los scripts de deploy; ya no desde /scripts, por eso lo nombramos legacy, y lo excluimos para que no moleste si tiene errores. Siempre podemos volver a incluirlo.
   ]
 }

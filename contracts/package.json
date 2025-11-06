@@ -4,6 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "node": "hardhat node",
+    "compile": "hardhat compile",
+    "deploy:local": "hardhat deploy --network localhost --tags core",
+    "seed:local": "hardhat deploy --network localhost --tags seed",
+    "reset:local": "hardhat deploy --network localhost --tags core,seed --reset",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,6 +27,7 @@
     "dotenv": "^16.6.1",
     "ethers": "^5.8.0",
     "hardhat": "^2.26.3",
+    "hardhat-deploy": "^1.0.4",
     "ts-node": "^10.9.2",
     "typechain": "^8.3.2",
     "typescript": "^5.9.2"
